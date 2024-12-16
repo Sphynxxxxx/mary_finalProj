@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #FFF8E8;
+    --second-bg-color: #626F47;
+    --text-color: black;
+    --second-text-color: white;
+    --main-color: #CEDF9F;
+    --second-main-color: #674636;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.footer {
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    flex-wrap: wrap; 
+    color: var(--second-bg-color);
+    text-align: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 2rem; 
+    color: rgb(90, 89, 89);
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--second-text-color);
+    margin-left: 3.5rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideTop .7s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--main-color);
+}
+
+.post-section {
+    min-height: 100vh;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    margin: 7rem auto;
+}
+.post-section h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 8rem;
+    color: var(--second-main-color);
+}
+
+ .post-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: rgb(90, 89, 89);
+ }
+.post-content img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+  margin-right: auto;
+}
+.post-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.post-comment-button {
+    background-color:#4e8650;
+    text-size-adjust: 12px;
+    color: white;
+    padding: 8px 12px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.like-button {
+    background-color: #4e8650;
+    text-size-adjust: 12px;
+    color: white;
+    padding: 8px 12px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-area {
+    margin-top: 10px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comment-list {
+    margin-top: 10px;
+}
+
+.comment {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 1;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    .flat {
+        flex-direction: column;
+    }
+
+    .basket, .form-container {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+

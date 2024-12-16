@@ -1,0 +1,193 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #FFF8E8;
+    --secondary-bg: #626F47;
+    --primary-color: #677E52;
+    --light-color: #E8E2D0;
+    --input-border: #A0B083;
+    --btn-hover-bg: #879C72;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--secondary-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.logo-img {
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Signup section styling */
+
+.signup {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #f8f5e9; /* Optional: background color matching your style */
+    padding: 20px; /* Prevents content from touching screen edges on smaller devices */
+}
+
+.signup-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 7rem;
+    align-items: center;
+}
+
+.signup-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between; /* Space between label and input */
+    align-items: center; /* Aligns input and label vertically */
+    width: 100%;
+}
+
+.input-group label {
+    width: 30%; /* Consistent width for all labels */
+    text-align: right;
+    margin-right: 1rem; /* Space between label and input */
+    font-size: 1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.input-group input {
+    width: 70%; /* Take remaining space for input */
+    max-width: 300px;
+    padding: 0.8rem;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    text-align: left; /* Left align text inside input */
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background-color: white;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: .5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40%;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+.signup-container p {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.signup-container a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}
+
+/* Social Login Section Styling */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.social-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color); /* Use your primary theme color */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.forgot-password {
+    margin-top: 1rem; /* Space above the link */
+    font-size: 0.9rem; /* Font size */
+    color: var(--primary-color); /* Use your primary theme color */
+}
+
+.forgot-password a {
+    text-decoration: none; /* Ensure no underline on the link */
+    font-weight: 500; /* Font weight for better visibility */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.forgot-password a:hover {
+    color: var(--btn-hover-bg); /* Change color on hover */
+}
+
+.social-login a i {
+    font-size: 2rem;
+    color: white;
+}
+
+.social-login a:hover {
+    transform: scale(1.1); 
+}
+
+.footer {
+    margin-top: auto;
+    background-color: var(--secondary-bg);
+    padding: 1rem 9%;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #FFF8E8;
+    --second-bg-color: #626F47;
+    --text-color: black;
+    --second-text-color: white;
+    --main-color: #CEDF9F;
+    --second-main-color: #674636;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.footer {
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    flex-wrap: wrap; 
+    color: var(--second-bg-color);
+    text-align: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--second-text-color);
+    margin-left: 3.5rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideTop .7s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('C:\\mary\\pexels-19x14-9695850.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    text-align: center;
+    color: var(--second-text-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 125px;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.home-content p {
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background: var(--second-bg-color);
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    color: var(--second-text-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 4rem var(--main-color);
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border: .2rem solid var(--bg-color);
+    border-radius: 40%;
+    font-size: 4rem;
+    color: var(--bg-color);
+    margin: 3.5rem 1.5rem 3rem 0;
+    transition: .3s ease;
+    animation: slideRight 0.7s ease forwards; 
+    animation-delay: 0s; 
+    opacity: 1;
+}
+
+.social-media a:hover {
+    background: var(--bg-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.featured-posts {
+    text-align: center;
+    padding: 50px;
+}
+
+.featured-posts h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.post-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: slideTop .7s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.post {
+background-color: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+max-width: 380px;
+text-align: center;
+transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.post img {
+width: 100%;
+height: auto;
+transition: transform 0.3s, opacity 0.3s; 
+cursor: pointer;
+}
+
+.post-content {
+padding: 20px;
+}
+
+.category {
+    font-size: 20px;
+    color: var(--second-main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+h5 {
+    font-size: 13px;
+    color: #5c5c5c;
+    margin: 10px 0;
+}
+.view-post {
+    text-decoration: none;
+    color: var(--second-bg-color);
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s; 
+}
+
+.view-post:hover {
+    text-decoration: underline;
+    color: var(--main-color); 
+}
+
+.post:hover img {
+    transform: scale(1.05); 
+    opacity: 0.9; 
+}
+
+.post:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 1;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+

@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #FFF8E8;
+    --second-bg-color: #626F47;
+    --text-color: black;
+    --second-text-color: white;
+    --main-color: #CEDF9F;
+    --second-main-color: #674636;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.footer {
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    flex-wrap: wrap; 
+    color: var(--second-bg-color);
+    text-align: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar {
+    display: flex; /* Ensure flexbox layout for navbar */
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--second-text-color);
+    margin-left: 3.5rem;
+    font-weight: 500;
+    opacity: 1; /* Ensure visibility */
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.product-posts {
+    text-align: center;
+    padding: 50px;
+}
+
+.product-posts h1 {
+    font-size: 40px;
+    color: var(--second-main-color);
+    margin-top: 100px;
+}
+
+.post-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: slideTop .7s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.post {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 380px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s; 
+    cursor: pointer;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.category {
+    font-size: 20px;
+    color: var(--second-main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.variety {
+    font-size: 20px;
+    color: var(--second-main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.view-post {
+    text-decoration: none;
+    color: var(--second-bg-color);
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s; 
+}
+
+.view-post:hover {
+    text-decoration: underline;
+    color: var(--main-color); 
+}
+
+.post:hover img {
+    transform: scale(1.05); 
+    opacity: 0.9; 
+}
+
+.post:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 1;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
