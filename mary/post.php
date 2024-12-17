@@ -9,7 +9,6 @@ if (isset($_GET['id'])) {
     $post = mysqli_fetch_assoc($result);
 }
 
-// Handle comment submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment'])) {
     $comment = mysqli_real_escape_string($conn, $_POST['comment']);
     $insert_sql = "INSERT INTO comments (post_id, comment) VALUES ('$post_id', '$comment')";
@@ -18,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment'])) {
     exit();
 }
 
-// Handle like submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['like'])) {
     $update_likes_sql = "UPDATE posts SET likes = likes + 1 WHERE id = $post_id";
     mysqli_query($conn, $update_likes_sql);
@@ -75,7 +73,6 @@ $comments_result = mysqli_query($conn, $comments_query);
                 <p><?php echo nl2br(htmlspecialchars($post['procedures'])); ?></p>
             </div>
 
-            <!-- Like Section -->
             <div class="post-actions">
                 <form method="POST" action="">
                     <button type="submit" name="like" class="like-button">
@@ -86,7 +83,6 @@ $comments_result = mysqli_query($conn, $comments_query);
             </div>
 
 
-            <!-- Comment Section -->
             <div class="comment-area">
                 <h3>Comments</h3>
                 

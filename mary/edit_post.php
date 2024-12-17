@@ -4,12 +4,10 @@ include('config.php');
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     
-    // Fetch post details
     $sql = "SELECT * FROM posts WHERE id = $id";
     $result = mysqli_query($conn, $sql);
     $post = mysqli_fetch_assoc($result);
 
-    // Handle post updates
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['materials'], $_POST['procedures'])) {
         $materials = mysqli_real_escape_string($conn, $_POST['materials']);
         $procedures = mysqli_real_escape_string($conn, $_POST['procedures']);
@@ -23,7 +21,6 @@ if (isset($_GET['id'])) {
         }
     }
 
-    // Handle comment deletion
     if (isset($_GET['delete_comment_id'])) {
         $comment_id = $_GET['delete_comment_id'];
         $delete_sql = "DELETE FROM comments WHERE id = $comment_id";
@@ -35,7 +32,6 @@ if (isset($_GET['id'])) {
         }
     }
 
-    // Fetch comments for the post
     $comments_query = "SELECT * FROM comments WHERE post_id = $id ORDER BY created_at DESC";
     $comments_result = mysqli_query($conn, $comments_query);
 }

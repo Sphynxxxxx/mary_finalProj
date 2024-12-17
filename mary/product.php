@@ -1,13 +1,10 @@
 <?php
-include('config.php'); // Ensure this file contains your database connection
+include('config.php'); 
 
-// Fetch posts from the database
-$sql = "SELECT * FROM posts";  // Query to select all posts
+$sql = "SELECT * FROM posts";  
 $result = mysqli_query($conn, $sql);
 
-// Check if there are posts available
 if (mysqli_num_rows($result) > 0) {
-    // Store the results in an array for later use
     $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 } else {
     $posts = [];

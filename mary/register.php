@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
 
-    // Input validation
     if (empty($name) || empty($email) || empty($password) || empty($confirmPassword)) {
         die("All fields are required!");
     }

@@ -29,14 +29,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Product</title>
+    <title>Add New Content</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css\admin.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Add New Product</h1>
+        <div style="display: flex; align-items: center;">
+            <a href="home.php" style="text-decoration: none; color: black; font-size: 24px; margin-right: 10px;">
+                &#x2715;
+            </a>
+        </div>
+        <h1>Add New Content</h1>
 
         <?php if (isset($error)): ?>
             <div class="alert"><?= $error ?></div>

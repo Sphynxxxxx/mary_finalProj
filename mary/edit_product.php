@@ -1,7 +1,6 @@
 <?php
 include('config.php');
 
-// Check if an ID is passed
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM posts WHERE id = '$id'";
@@ -11,7 +10,6 @@ if (isset($_GET['id'])) {
     }
 }
 
-// Update product
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];
     $category = $_POST['category'];
@@ -19,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $variety = $_POST['variety'];
 
     if (!empty($_FILES['image']['name'])) {
-        // Handle new image upload
         $image = $_FILES['image']['name'];
         $target = "uploads/" . basename($image);
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {

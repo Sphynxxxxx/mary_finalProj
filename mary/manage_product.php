@@ -1,7 +1,6 @@
 <?php
 include('config.php');
 
-// Delete product
 if (isset($_GET['delete_id'])) {
     $delete_id = $_GET['delete_id'];
     $sql = "SELECT image FROM posts WHERE id = '$delete_id'";
@@ -10,12 +9,10 @@ if (isset($_GET['delete_id'])) {
         $row = mysqli_fetch_assoc($result);
         $imagePath = "uploads/" . $row['image'];
 
-        // Delete the product image from the folder
         if (file_exists($imagePath)) {
             unlink($imagePath);
         }
 
-        // Delete product from database
         $deleteSql = "DELETE FROM posts WHERE id = '$delete_id'";
         if (mysqli_query($conn, $deleteSql)) {
             echo "Product deleted successfully.";
@@ -25,7 +22,7 @@ if (isset($_GET['delete_id'])) {
     }
 }
 
-// Fetch all products
+
 $sql = "SELECT * FROM posts";
 $result = mysqli_query($conn, $sql);
 ?>

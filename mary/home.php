@@ -24,6 +24,7 @@
             <a href="about.php" style="--i:3;">About</a>
             <a href="contact.php"style="--i:4;">Contact</a>
             <a href="signUp.php" style="--i:5">Sign Up</a>
+            <a href="admin.php" style="--i:5">Admin</a>
         </nav>
     </header>
 
