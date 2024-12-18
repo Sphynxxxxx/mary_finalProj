@@ -35,6 +35,7 @@ if (mysqli_num_rows($result) > 0) {
             <a href="about.php" style="--i:3;">About</a>
             <a href="contact.php" style="--i:3;">Contact</a>
             <a href="signUp.php" style="--i:5">Sign Up</a>
+            <a href="logout.php" style="--i:5">Log Out</a>
         </nav>
     </header>
 

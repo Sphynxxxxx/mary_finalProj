@@ -20,6 +20,8 @@
             <a href="about.php" class="active">About</a>
             <a href="contact.php">Contact</a>
             <a href="signUp.php">SignUp</a>
+            <a href="logout.php" style="--i:5">Log Out</a>
+
         </nav>
     </header>
 

@@ -19,6 +19,8 @@
             <a href="about.php">About</a>
             <a href="contact.php" class="active">Contact</a>
             <a href="signUp.php">Sign Up</a>
+            <a href="logout.php" style="--i:5">Log Out</a>
+
         </nav>
     </header>
 
