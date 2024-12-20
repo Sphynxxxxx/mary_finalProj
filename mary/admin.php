@@ -6,12 +6,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category = $_POST['category'];
     $description = $_POST['description'];
     $variety = $_POST['variety'];
+    $materials = $_POST['materials'];
+    $procedures = $_POST['procedures'];
 
     $image = $_FILES['image']['name'];
     $target = "uploads/" . basename($image);
 
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-        $sql = "INSERT INTO posts (title, category, image, description, variety) VALUES ('$title', '$category', '$image', '$description', '$variety')";
+        $sql = "INSERT INTO posts (title, category, image, description, variety, materials, procedures) VALUES ('$title', '$category', '$image', '$description', '$variety' , '$materials', '$procedures')";
         
         if (mysqli_query($conn, $sql)) {
             echo "New product added successfully";
@@ -73,6 +75,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="materials">Materials: </label>
+                <textarea id="materials" name="materials" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="procedures">Procedures:</label>
+                <textarea id="procedures" name="procedures" rows="5" required></textarea>
             </div>
 
             <div class="form-group">

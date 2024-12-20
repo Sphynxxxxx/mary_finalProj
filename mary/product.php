@@ -30,7 +30,7 @@ if (mysqli_num_rows($result) > 0) {
         </a>
 
         <nav class="navbar">
-            <a href="home.php" style="--i:1;">Home</a>
+            <a href="../index.php">Home</a>
             <a href="product.php" style="--i:2;" class="active">Products</a>
             <a href="about.php" style="--i:3;">About</a>
             <a href="contact.php" style="--i:3;">Contact</a>

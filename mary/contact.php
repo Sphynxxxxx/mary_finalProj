@@ -14,7 +14,7 @@
             <img src="images\wm.png" alt="Weave Me" class="logo-img">
         </a>
         <nav class="navbar">
-            <a href="home.php">Home</a>
+            <a href="../index.php">Home</a>
             <a href="product.php" style="--i:2;">Products</a>
             <a href="about.php">About</a>
             <a href="contact.php" class="active">Contact</a>
